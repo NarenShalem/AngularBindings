@@ -1,0 +1,12 @@
+<p>
+  Add Employee
+</p>
+<div>
+	<input [value]="student.fname"
+		(input)="student.fname=$event.target.value" /> <br/>
+	<input [value]="student.lname"
+		(input)="student.lname=$event.target.value" /> <br/>
+	<br/>
+	<button (click)="save()">Submit</button>
+</div> 
+

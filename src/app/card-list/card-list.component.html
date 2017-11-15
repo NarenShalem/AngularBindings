@@ -1,0 +1,25 @@
+
+<app-card (saveEmployee) ="saveData($event)"
+	[student] ="studentObj">
+</app-card>
+
+<div>
+<table style="border:2px solid;text-align: center;">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>FName</th>
+				<th>LName</th>
+			</tr>
+		</thead>
+        <tbody>
+        	<tr *ngFor ="let data of fullName; let i='index'">
+        		<td>{{i+1}}</td>
+        		<td>{{data.fname}}</td>
+        		<td>{{data.lname}}</td>
+        		<td><span (click) = "deleteData(data)">Delete</span></td>
+        		<td><span (click) = "updateData(data)">Edit</span></td>
+        	</tr>
+        </tbody>
+</table>
+</div>	
